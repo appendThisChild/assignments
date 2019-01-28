@@ -1,0 +1,47 @@
+.column {
+    float: left;
+    width:16%;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 2px;
+}
+.column2 {
+    float: left;
+    width:52%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 2px;
+}
+.column1 {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 2px;
+    text-align: center;
+}
+div.column2 > h4 {
+    text-align: left;
+}
+div.column2 > p {
+    font-size: 20px;
+}
+div > p {
+    font-style: italic;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+h2 {
+    text-align: center;
+    font-size: 75px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 15px;
+}
+img {
+    width: 100%;
+    height: auto;
+}
