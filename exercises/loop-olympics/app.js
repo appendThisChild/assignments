@@ -75,8 +75,7 @@ occupations = [];
 for (x = 0; x < peopleArray.length; x++){
     if (x % 2 === 0){
         names.push(peopleArray[x].name)
-    }
-    if (x % 2 != 0){
+    } else if (x % 2 != 0){
         occupations.push(peopleArray[x].occupation)
     }
 }
@@ -116,4 +115,12 @@ grid = [];
 for (x = 1; x < 9; x++){
     grid.push([x++,x++,x])
 }
+console.log(grid)
+//
+console.log("\n")
+grid = [[1,2,3],[1,2,3],[1,2,3]];
+for (x = 0; x < 3; x++){
+    grid[[x]].fill("x");
+}
+
 console.log(grid)

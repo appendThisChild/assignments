@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box; 
+    font-size: 0px;
+}
+div > div {
+    margin: 5px;
+}
+.noMarg {
+    margin: 0px;
+}
+.lightPink {
+    background-color: #F5C6D6;
+    height: 100px;
+    width: 610px;
+}
+.hotPink {
+    display: inline-block;
+    background-color: #EE2E84;
+    height: 100px;
+    width: 145px;
+}
+.aquaMarine {
+    display: inline-block;
+    background-color: #85CFD8;
+    height: 100px;
+    width: 300px ;
+}
+.green {
+    display: inline-block;
+    background-color: #8DC63F;
+    height: 100px;
+    width: 450px;
+}
+.orange {
+    display: inline-block;
+    background-color: #E76E34;
+    height: 100px;
+    width: 150px;
+}
