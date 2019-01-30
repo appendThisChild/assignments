@@ -11,10 +11,12 @@
     padding: 10px;
     text-align: center;
     border: 1px solid black;
-    margin: 2px;
+    margin: auto;
+    margin-top: 2px;
+    margin-left: 2px;
 }
 .column1 {
-    float: left;
+    float: right;
     width: 20%;
     padding: 10px;
     border: 1px solid black;
@@ -44,4 +46,7 @@ h2 {
 img {
     width: 100%;
     height: auto;
+}
+div > div {
+    text-align: center;
 }

@@ -24,7 +24,7 @@ console.log(capilizeAndLowercase2("Hello World"))
 //
 function capitalize(str){
     return str.replace(/\w\S*/g, function(txt){
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        return txt[0].toUpperCase() + txt.substr(1)
     })
 }
 console.log(capitalize("hey friends! practice practice practice!"))
