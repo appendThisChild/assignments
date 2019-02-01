@@ -20,5 +20,5 @@ function removeRandomLetter(str) {
     var pos = Math.floor(Math.random() * str.length);
     return str.substr(0, pos) + str.substr(pos + 1);
 }
-
 random(input)
+//

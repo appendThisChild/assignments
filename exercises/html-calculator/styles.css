@@ -1,0 +1,22 @@
+.div {
+    display: flex;
+}
+form {
+    display: inline-block;
+    flex: 100%;
+}
+input {
+    display: block;
+}
+.add {
+    background-color: red;
+    border-radius: 5px;
+}
+.sub {
+    background-color: yellow;
+    border-radius: 5px;
+}
+.multi {
+    background-color: green;
+    border-radius: 5px;
+}

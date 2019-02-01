@@ -1,6 +1,16 @@
 *{
     margin: 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: didot,'Times New Roman', Times, serif;
+    line-height: 135%;
+}
+body {
+    background-image: url("http://cdn.digitaldjtips.com/app/uploads/2014/10/09143808/Guilt-Free.jpg");
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    background-attachment: fixed
+    
 }
 .img1{
     display: block;
@@ -8,10 +18,12 @@
     margin-right: auto;
     height: 300px;
     width: auto;
+    border-radius: 50%;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
 }
 nav{
     text-align: center;
-    /* background-color: rgba(0, 4, 255, 0.527); */
     position: -webkit-sticky; /* Safari */
     position: sticky; 
     top: 0px;
@@ -23,7 +35,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border: 1px rgba(255, 255, 255, 0.349) solid;
+    border: 1px rgba(255, 255, 255, 0.4) solid;
     border-radius: 15px;
 }
 li {
@@ -40,13 +52,13 @@ li a {
     padding-right: 50px;
     padding-left: 50px;
     text-decoration: none;
-    /* background-color: rgba(0, 4, 255, 0.527); */
+    background-color: rgba(0, 0, 0, 0.75);
     transition: background-color 0.35s linear;
 }
 li a:hover {
     color: black;
     font-weight: bold;
-    background-color: rgb(65, 0, 187);
+    background-color: rgba(255, 255, 255, 0.75);
 }
 .row{
     display: flex;
@@ -54,28 +66,80 @@ li a:hover {
 .columnMiddle{
     flex: 75%;
     color: white;
-    margin: 10px;
+    margin: 5px;
     border-radius: 10px;
     padding: 5px;
 }
-.middle{
-    background-color: black;
-    border-radius: 10px;
-    padding: 5px;
+.columnMiddle > h3 {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-size: 30px;
+}
+.columnMiddle > section {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .columnSide{
     flex: 25%;
     color: white;
-    background-color: grey;
-    margin: 10px;
-    border-radius: 10px;
+    background-color: rgb(128, 128, 128, .30);
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+.columnSide2{
+    flex: 25%;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.30);
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+div.columnMiddle > h3, article, section{
+    background-color: rgba(0, 0, 0, 0.75); 
     padding: 5px;
 }
-div.columnSide > h3, article, h5{
-    background-color: grey;
-    border-radius: 10px;
+div.columnSide > h3, article, section{
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 5px;
+}
+div.columnSide2 > h3, article, section{
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 5px;
 }
 h3 {
     text-align: center;
+    text-decoration: underline;
+    font-weight: 500;
+}
+div.columnSide > h3 {
+    border-top-right-radius: 10px;
+}
+div.columnSide2 > h3 {
+    border-top-left-radius: 10px;
+}
+div.columnSide > section {
+    border-bottom-right-radius: 10px;
+}
+div.columnSide2 > section {
+    border-bottom-left-radius: 10px;
+}
+h5 {
+    padding-left: 2px;
+    padding-bottom:2px;
+    font-size: 17px;
+    text-decoration: underline;
+}
+article, section {
+    font-size: 18px;
 }
