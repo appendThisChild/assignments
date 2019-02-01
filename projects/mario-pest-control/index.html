@@ -10,6 +10,9 @@
 <body>
     <div class="backImage"></div>
     <h1>Mario's Pest Control</h1>
+    <div>
+        <h2 class="subTitle">Bill Calculation Sheet</h2> 
+    </div>
     <form name="totalCoins">
         <div class="row">
             <div class="column">
@@ -19,7 +22,9 @@
                 <br>
                 <img src="https://vignette.wikia.nocookie.net/mario/images/3/34/Goomba_Mario.png/revision/latest?cb=20170807055949" alt="">
                 <br>
-                <input type="number" name="goombas" placeholder="0">
+                <h3>Baddies caught</h3>
+                <br>
+                <input type="number" name="goombas" value="0" onClick="this.select()">
             </div>
             <div class="column">
                 <h2>Bob-ombs</h2>
@@ -28,7 +33,9 @@
                 <br>
                 <img src="https://vignette.wikia.nocookie.net/deathbattlefanon/images/9/9d/King_Bob-Omb%21_.png/revision/latest?cb=20160503180947" alt="">
                 <br>
-                <input type="number" name="bobOmbs" placeholder="0">
+                <h3>Baddies caught</h3>
+                <br>
+                <input type="number" name="bobOmbs" value="0" onClick="this.select()">
             </div>
             <div class="column">
                 <h2>Cheep-cheeps</h2>
@@ -37,25 +44,34 @@
                 <br>
                 <img src="https://static.tvtropes.org/pmwiki/pub/images/porcupuffer.png" alt="">
                 <br>
-                <input type="number" name="cheepCheeps" placeholder="0">
+                <h3>Baddies caught</h3>
+                <br>
+                <input type="number" name="cheepCheeps" value="0" onClick="this.select()">
             </div>
         </div>
         <br>
         <br>
         <br>
         <div>
+            <h3>Total Coins</h3>
+        </div>
+        <div>
             <button class="button">=</button>
         </div>
+        <br>
+        <div id="equalImage"></div>
         <div id="equal"></div>
         <!-- <img class="img" src="https://www.pngarts.com/files/3/Mario-Coin-PNG-High-Quality-Image.png" alt=""> -->
     </form>
-    <footer>
-        <ul>
-            <li><a href="">mario@pestcontrol.com</a></li>
-            <li><a href="">www.pestcontrol.com</a></li>
-            <li><a href="">1817 Mushroom Kingdom Blvd, Brooklyn, New York, 11218</a></li>
-        </ul>
-    </footer>
+    <div>
+        <footer>
+            <ul>
+                <li><a href="">mario@pestcontrol.com</a></li>
+                <li><a href="">www.pestcontrol.com</a></li>
+                <li><a href="">1817 Mushroom Kingdom Blvd, Brooklyn, New York, 11218</a></li>
+            </ul>
+        </footer>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
