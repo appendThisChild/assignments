@@ -1,0 +1,49 @@
+body {
+    padding-top: 300px;
+    padding-bottom: 33%;
+}
+div {
+    margin-left: auto;
+    margin-right: auto;
+}
+.box {
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border: 1px black solid;
+}
+.box1 {
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    border: 1px black solid;
+}
+.box2 {
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    border: 1px black solid;
+}
+.box3 {
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
+    border: 1px black solid;
+}
+.box4 {
+    height: 300px;
+    width: 300px;
+    background-color: green;
+    border: 1px black solid;
+}
+.box5 {
+    height: 300px;
+    width: 300px;
+    background-color: orange;
+    border: 1px black solid;
+}
+.h1 {
+    margin: 0;
+    text-align: center;
+    padding-top: 125px;
+}

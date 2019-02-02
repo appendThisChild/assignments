@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="row">
+        <form class="column" name="form">
+            <div>
+                <h2 class="big">Travel Form</h2>
+                <input type="text" name="firstName" required placeholder=" First name" value="">
+                <input type="text" name="lastName" required placeholder=" Last name" value="">
+                <br>
+                <br>
+                <input type="number" name="age" required placeholder=" Age">
+                <br>
+                <br>
+                <div>
+                    <input type="radio" name="gender" value="Male" checked>
+                    <label>Male</label>
+                    <input type="radio" name="gender" value="Female">
+                    <label>Female</label>
+                </div>
+                <div class="toLeft">
+                    <br>
+                    <h2>Location:</h2>
+                    <input class="toMiddle" type="radio" name="location" value="Honolulu, Hawaii" checked>
+                    <label>Honolulu, Hawaii</label>
+                    <br>
+                    <br>
+                    <input class="toMiddle" type="radio" name="location" value="Maui, Hawaii">
+                    <label>Maui, Hawaii</label>
+                    <br>
+                    <br>
+                    <input class="toMiddle" type="radio" name="location" value="Kauai, Hawaii">
+                    <label>Kauai, Hawaii</label>
+                </div>
+                <br>
+                <div>
+                    <h2 class="toLeft">Dietary restrictions:</h2>
+                    <br>
+                    <input type="checkbox" name="vegan" value="Vegan">
+                    <label class="checkbox">Vegan</label>
+                    <input type="checkbox" name="vegetarian" value="Vegetarian">
+                    <label class="checkbox">Vegetarian</label>
+                    <input type="checkbox" name="kosher" value="Kosher">
+                    <label class="checkbox">Kosher</label>
+                    <input type="checkbox" name="lactoseFree" value="Lactose Free">
+                    <label class="checkbox">Lactose Free</label>
+                </div>
+                <button class="button">Submit</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>© 2019 Delta Air Lines, Inc. | Travel may be on other airlines.</p>
+        <p>Terms and conditions apply to all offers and SkyMiles benefits. See specific offer for details, and visit <span>SkyMiles Membership Guide & Program Rules.</span></p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
