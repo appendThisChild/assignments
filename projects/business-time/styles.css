@@ -1,0 +1,446 @@
+/* Small Phones */
+*{
+    margin: 0;
+}
+body {
+    background-color: black;
+    background-image: url("http://audreytaylorgonzalez.com/blog/wp-content/uploads/2015/12/fresh_sun_light-1920x1200.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* Logo Header */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo .img {
+    width: 60pt;
+}
+.logo h1 {
+    font-size: 22pt;
+    font-family: snell roundhand;
+}
+/* Logo Header */
+
+/* Nav Bar */
+.toggle {
+    padding: 6pt;
+    position: sticky;
+    top: 0;
+    font-size: 30px;
+    cursor:pointer;
+}
+.toggle:hover {
+    color: white;
+    transition: 0.4s;
+}
+.nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.678);
+    overflow-x: hidden;
+    transition: .4s;
+    padding-top: 50px;
+}
+.nav li {
+    display: block;
+    padding: 5pt; 
+    padding-left: 28pt;
+    
+}
+.nav a {
+    text-decoration: none;
+    font-size: 18pt;
+    color: #ffffff;
+    transition: 0.3s;
+}
+.nav a:hover {
+    color: #7a68bd;
+}
+.nav ul {
+    padding-left: 0;
+}
+/* Nav Bar */
+
+/* Body */
+.body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5pt;
+}
+.body main {
+    padding: .25pt;
+    margin: 5pt;
+    border-radius: 5pt;
+    background-color: rgba(255, 0, 0, 0.65);
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    order: 0;
+}
+.body .left {
+    padding: .25pt;
+    margin: 5pt;
+    border-radius: 5pt;
+    background-color: rgba(0, 185, 25, 0.65);
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    order: 1;
+}
+.body .right {
+    padding: .25pt;
+    margin: 5pt;
+    border-radius: 5pt;
+    background-color: rgba(4, 0, 255, 0.65);
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    order: 2;
+}
+.body .midSize {
+    flex-direction: column;
+    flex: 5;
+}
+/* Body */
+
+/* Within Body */
+.withinMain h1 {
+    padding: 5pt;
+}
+.withinMain article {
+    margin: 5pt;
+    padding: 5pt;
+    border-radius: 5pt;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.withinMain article img {
+    width: 75pt;
+    height: 75pt;
+    object-fit: cover;
+}
+.withinMain article p {
+    text-align: left;
+    line-height: 15pt;
+}
+.withinMain article h2:hover {
+    text-decoration: underline;
+    color: blue;
+}
+.right h1 {
+    padding: 5pt;
+}
+.right article {
+    margin: 5pt;
+    padding: 5pt;
+    border-radius: 5pt;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.right article h2{
+    font-size: 13pt;
+}
+.right > img {
+    width: 100pt;
+    padding: 3pt;
+    border-radius: 5pt;
+    background-color: rgba(255, 255, 255, 0.5);;
+}
+.right article .people {
+    width: 30pt;
+    height: 30pt;
+    object-fit: cover;
+    float: left;
+    padding-right: 6pt;
+}
+.right article span {
+    font-size: 10pt;
+    font-style: italic;
+}
+.left h1 {
+    padding: 5pt;
+}
+.left article {
+    margin: 5pt;
+    padding: 5pt;
+    border-radius: 5pt;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* Within Body */
+
+/* footer */
+footer {
+    background-color: #ffffff6e;
+    text-align: center;
+    font-size: 13pt;
+    padding-bottom: 3pt;
+}
+footer > span:hover {
+    color: blue;
+    text-decoration: underline;
+}
+/* footer */
+
+/* About */
+.about {
+    display: flex;
+    justify-content: center;
+    margin: 5pt;
+}
+.about .right1 {
+    padding: .25pt;
+    margin: 5pt;
+    border-radius: 5pt;
+    background-color: rgba(4, 0, 255, 0.65);
+    text-align: center;
+    width: 100%;
+}
+.right1 h1 {
+    padding: 5pt;
+}
+.right1 article {
+    margin: 5pt;
+    padding: 5pt;
+    border-radius: 5pt;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* About */
+
+/* Contact */
+.contact {
+    display: flex;
+    justify-content: center;
+    margin: 5pt;
+}
+.contact .left1 {
+    padding: .25pt;
+    margin: 5pt;
+    border-radius: 5pt;
+    background-color: rgba(0, 185, 25, 0.65);
+    text-align: center;
+    width: 100%;
+}
+.left1 h1 {
+    padding: 5pt;
+}
+.left1 article {
+    display: flex;
+    margin: 5pt;
+    padding: 5pt;
+    border-radius: 5pt;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-items: center;
+    flex-direction: column;
+}
+.img1 {
+    width: 120pt;
+    height: auto;
+}
+form {
+    display: flex;
+    width: 100%;
+}
+.column {
+    flex-direction: column;
+    align-items: center;
+}
+.column input {
+    margin: 5pt;
+    font-size: 12pt;
+    padding-left: 5pt;
+    width: 90%;
+    border-radius: 10pt;
+}
+.column button {
+    margin: 5pt;
+    font-size: 12pt;
+    width: 50pt;
+    background-color: rgba(0, 185, 25, 0.65);
+    border-radius: 10pt;
+
+}
+.column textarea {
+    margin: 5pt;
+    height: 50pt;
+    width: 90%;
+    font-size: 12pt;
+}
+/* Contact */
+
+
+
+/* Large Phone to Mid-Tablets */
+@media (min-width: 300pt){
+    /* Logo Header */
+    .logo{
+        margin-top: 20pt;
+    }
+    .logo .img {
+        width: 60pt;
+    }
+    .logo h1 {
+        font-size: 24pt;
+    }
+    /* Logo Header */
+
+    /* Nav Bar */
+    .toggle {
+        display: none;
+    }
+    .nav {
+        display: flex;
+        height: auto;
+        width: 100%;
+        position: sticky;
+        background-color: rgb(0, 0, 0 , .5);
+        overflow-x: initial;
+        padding: 0;
+        transition: 0;
+        border-radius: 0;
+    }
+    .nav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .nav li {
+        color: white;
+        padding-left: 0pt;
+        padding-right: 0pt;
+        padding-top: 4pt;
+        padding-bottom: 4pt;
+        text-decoration: none;
+        font-size: 18pt;
+    }
+    /* Nav Bar */
+
+    /* Within Body */
+    .withinMain article img {
+        float: right;
+    }
+    .withinMain article h2 {
+        text-align: left;
+    }
+    /* Within Body */
+}
+
+
+
+/* Mid-Tablet to Full Tablet */
+@media (min-width: 420pt){
+    /* Logo Header */
+    .logo h1 {
+        font-size: 25pt;
+    }
+    /* Logo Header */
+
+    /* Nav Bar */
+    .nav {
+        background-color: rgb(0, 0, 0 , 0);
+        justify-content: center;
+        margin-top: 10pt;
+
+    }
+    .nav ul {
+        justify-content: space-around;
+        width: 75%;
+        background-color: rgb(0, 0, 0 , .5);
+        border-radius: 10pt;
+    }
+    /* Nav Bar */
+
+    /* About */
+    .about .right1 {
+        width: 400pt;
+    }
+    /* About */
+
+    /* Contact */
+    .contact .left1 {
+        width: 400pt;
+    }
+    .left1 article {
+        flex-direction: row;
+    }
+    .img1 {
+        width: 180pt;
+        height: auto;
+    }
+    .column textarea {
+        height: 120pt;
+    }
+    /* Contact */
+}
+
+
+
+/* Screen */
+@media (min-width: 580pt){
+    /* Logo Header */
+    .logo{
+        margin-top: 20pt;
+    }
+    .logo .img {
+        width: 75pt;
+    }
+    .logo h1 {
+        font-size: 28pt;
+    }
+    /* Logo Header */
+
+    /* Nav Bar */
+    .nav ul {
+        justify-content: center;
+        width: 435pt;
+    }
+    .nav li {
+        padding-right: 32pt;
+        padding-left: 32pt;
+    }
+    /* Nav Bar */
+
+    /* Body */
+    .body {
+        flex-direction: row;
+    }
+    .body .left {
+        order: -1;
+    }
+    /* Body */
+
+    /* About */
+ 
+    /* About */
+}
+
+
+
+/* Large Screens */
+@media (min-width: 768pt){
+    /* Body */
+    .body .midSize {
+        display: flex;
+        flex-direction: row;
+    }
+    .body main {
+        flex: 4;
+    }
+    .body .right {
+        flex: 2;
+        order: 1;
+    }
+    /* Body */
+
+    /* About */
+    
+    /* About */
+}
