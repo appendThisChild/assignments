@@ -56,6 +56,7 @@ body {
     text-decoration: none;
     font-size: 18pt;
     color: #ffffff;
+    font-style: italic;
     transition: 0.3s;
 }
 .nav a:hover {
@@ -112,6 +113,8 @@ body {
 /* Within Body */
 .withinMain h1 {
     padding: 5pt;
+    font-style: italic;
+    font-variant: small-caps;
 }
 .withinMain article {
     margin: 5pt;
@@ -135,6 +138,8 @@ body {
 }
 .right h1 {
     padding: 5pt;
+    font-style: italic;
+    /* font-variant: small-caps; */
 }
 .right article {
     margin: 5pt;
@@ -164,6 +169,8 @@ body {
     font-style: italic;
 }
 .left h1 {
+    font-style: italic;
+    /* font-variant: small-caps; */
     padding: 5pt;
 }
 .left article {
@@ -209,8 +216,12 @@ footer > span:hover {
     margin: 5pt;
     padding: 5pt;
     border-radius: 5pt;
-    text-align: left;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
+}
+.right1 article p {
+    text-align: left;
+    line-height: 15pt;
 }
 /* About */
 
@@ -327,7 +338,7 @@ form {
     .withinMain article img {
         float: right;
     }
-    .withinMain article h2 {
+    .withinMain article h2, h3 {
         text-align: left;
     }
     /* Within Body */
@@ -416,10 +427,6 @@ form {
         order: -1;
     }
     /* Body */
-
-    /* About */
- 
-    /* About */
 }
 
 
@@ -439,8 +446,4 @@ form {
         order: 1;
     }
     /* Body */
-
-    /* About */
-    
-    /* About */
 }
