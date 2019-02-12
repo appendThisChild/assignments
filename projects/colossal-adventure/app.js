@@ -88,10 +88,8 @@ let introGear = {
         {name: "Leather Gloves", meleeAttackBonus: 0, magicAttackBonus: 0, magicDefenceBonus: 0, meleeDefenceBonus: 1},
     ],
     healthPotions: [
-        {
-            name: "10 HP",
-            hp: 10
-        },
+        {name: "10 HP", hp: 10},
+        {name: "30 HP", hp: 30},
     ],
     magicScrolls: [
         {
@@ -103,31 +101,31 @@ let introGear = {
 let enemys = [
     {
         name: "Bat",
-        health: Math.floor(Math.random() * (64 - 40)) + 40,
+        health: 0,
         damageMin: 2,
         damageMax: 4,
     },
     {
         name: "Ghoul",
-        health: Math.floor(Math.random() * (87 - 54)) + 54,
+        health: 0,
         damageMin: 11,
         damageMax: 15,
     },
     {
         name: "Witch",
-        health: Math.floor(Math.random() * (120 - 87)) + 87,
+        health: 0,
         damageMin: 20,
         damageMax: 35,
     },
     {
         name: "Poison Rat",
-        health: Math.floor(Math.random() * (47 - 31)) + 31,
+        health: 0,
         damageMin: 1,
         damageMax: 3,
     },
     {
         name: "Giant Spider",
-        health: Math.floor(Math.random() * (67 - 40)) + 40,
+        health: 0,
         damageMin: 5,
         damageMax: 9,
     },
@@ -169,6 +167,15 @@ let lvl1Drop = {
 /////////////////////
 // Game Functions //
 updatePlayerInfo()
+// Reset Enemy Health
+function resetEnemyHealth(){
+    enemys[0].health = Math.floor(Math.random() * (64 - 40)) + 40;
+    enemys[1].health = Math.floor(Math.random() * (87 - 54)) + 54;
+    enemys[2].health = Math.floor(Math.random() * (120 - 87)) + 87;
+    enemys[3].health = Math.floor(Math.random() * (47 - 31)) + 31;
+    enemys[4].health = Math.floor(Math.random() * (67 - 40)) + 40;
+}
+
 // Update Info
 // Adds the melee attack bonus to the melee attack
 function addMeleeAttackBonus(armRight, armLeft){
@@ -448,6 +455,7 @@ function initItems(){
     x.handWear.push(y.handWear[0])
     x.footWear.push(y.footWear[0])
     x.healthPotions.push(y.healthPotions[0])
+    x.healthPotions.push(y.healthPotions[1])
     x.magicScrolls.push(y.magicScrolls[0])
 }
 // Makes Array of Inventory Items
@@ -473,17 +481,18 @@ function armorChoice(inventoryName){
                     console.log("What armor would you like to equip?\n")
                     let weaps = invArrNames(x)
                     let weapChoice = ask.keyInSelect(weaps, "")
-                    console.log("\n\t\tYou've Equipped " + x[weapChoice].name + "!\n")
-                    if (x === playerStats.inventory.headWear){
-                        equipHead(weapChoice)
-                    } else if (x === playerStats.inventory.bodyWear){
-                        equipBody(weapChoice)
-                    } else if (x === playerStats.inventory.handWear){
-                        equipGlove(weapChoice)
-                    } else if (x === playerStats.inventory.footWear){
-                        equipShoe(weapChoice)
+                    if (weapChoice >= 0){
+                        console.log("\n\t\tYou've Equipped " + x[weapChoice].name + "!\n")
+                        if (x === playerStats.inventory.headWear){
+                            equipHead(weapChoice)
+                        } else if (x === playerStats.inventory.bodyWear){
+                            equipBody(weapChoice)
+                        } else if (x === playerStats.inventory.handWear){
+                            equipGlove(weapChoice)
+                        } else if (x === playerStats.inventory.footWear){
+                            equipShoe(weapChoice)
+                        } 
                     }
-                    
                 j--
             }
         } else {
@@ -553,7 +562,7 @@ function weaponsLoop(){
                     let arms = ["Left Arm", "Right Arm"]
                     let weaps = invArrNames(playerStats.inventory.weapons)
                     let weapchoice = ask.keyInSelect(weaps, "")
-                    if (weapchoice <= 0){
+                    if (weapchoice >= 0){
                         console.log("______________________________________________________________________________________________________________________")
                         console.log("Where would you like to equip that?\n")
                         let weapArm = ask.keyInSelect(arms, "")
@@ -718,7 +727,7 @@ function inventoryLoop(){
     console.log("______________________________________________________________________________________________________________________")
     console.log("\n\t\tYou have gained:\n")
     initItems()
-    console.log('1 Iron Sword, 1 Leather Helmet, 1 Leather Armor, 1 Leather Boots, \n1 Leather Gloves, 1 Health Potion "10HP", 1 Magic Scroll "Gain Magic!"')
+    console.log('1 Iron Sword, 1 Leather Helmet, 1 Leather Armor, 1 Leather Boots, \n1 Leather Gloves, 2 Health Potions "10HP" & "30HP", 1 Magic Scroll "Gain Magic!"')
     console.log("\n[Dagast] \n\tI hope these serve you well!")
     ask.question('\n\t\t"Press Enter To Continue"\n')
     console.log("______________________________________________________________________________________________________________________")
@@ -735,6 +744,7 @@ while (playerStats.health > 0){
             console.log("______________________________________________________________________________________________________________________")
             console.log("\n[Enemy Has Appeared!]")
             // Generate enemy
+            resetEnemyHealth()
             let y = Math.floor(Math.random() * 5)
             let enemy = enemys[y]
             //battle
@@ -806,6 +816,7 @@ while (playerStats.health > 0){
                     }
                 } else if (battleDecision === 2){
                     let x = Math.floor(Math.random() * 2)
+                    let y = Math.floor(Math.random() * 4)
                     if (x === 0){
                         console.log("______________________________________________________________________________________________________________________")
                         if (y === 0){
@@ -867,8 +878,31 @@ while (playerStats.health > 0){
                 playerStats.exp += healthLost;
                 console.log("\n\tYou defeated the Enemy!\n\n\tA new item is in your Inventory...\n\tand you earned  $" + (healthLost / 4) + "CC and " + healthLost + "EXP!")
             }
-            console.log("______________________________________________________________________________________________________________________")    
-        } else {
+            if (enemy.health <= 0 && y === 2){
+                let x = Math.floor(Math.random() * 7)
+                if (x === 0){
+                    let y = Math.floor(Math.random() * lvl1Drop.weapons.length) 
+                    playerStats.inventory.weapons.push(lvl1Drop.weapons[y])
+                } else if (x === 1){
+                    let y = Math.floor(Math.random() * lvl1Drop.headWear.length) 
+                    playerStats.inventory.headWear.push(lvl1Drop.headWear[y])
+                } else if (x === 2){
+                    let y = Math.floor(Math.random() * lvl1Drop.bodyWear.length) 
+                    playerStats.inventory.bodyWear.push(lvl1Drop.bodyWear[y])
+                } else if (x === 3){
+                    let y = Math.floor(Math.random() * lvl1Drop.footWear.length) 
+                    playerStats.inventory.footWear.push(lvl1Drop.footWear[y])
+                } else if (x === 4){
+                    let y = Math.floor(Math.random() * lvl1Drop.handWear.length) 
+                    playerStats.inventory.handWear.push(lvl1Drop.handWear[y])
+                } else if (x === 5){
+                    let y = Math.floor(Math.random() * lvl1Drop.healthPotions.length) 
+                    playerStats.inventory.healthPotions.push(lvl1Drop.healthPotions[y])
+                } 
+                console.log("\n\tYou defeated the Witch!\n\tAnother item has been added to your inventory!")
+                }
+                console.log("______________________________________________________________________________________________________________________")
+            } else {
             console.log("______________________________________________________________________________________________________________________")
             console.log("\n[You Moved Forward...]")
         }
