@@ -1,0 +1,641 @@
+* {
+    margin: 0;
+    padding: 0px;
+    font-family: Libre Baskerville;
+    font-weight: 400;
+}
+@font-face {
+    font-family: symbols;
+    src: url(./verdemoderna.woff) 
+}
+@font-face {
+    font-family: Julius Sans One;
+    src: url(1Pt2g8TAX_SGgBGUi0tGOYEga5WOwnsXy6KHHg.woff2);
+}
+@font-face {
+    font-family: Libre Baskerville-Italic;
+    src: url(kmKhZrc3Hgbbcjq75U4uslyuy4kn0qNcWxEQDO-Wyrs.woff2);
+}
+@font-face {
+    font-family: Libre Baskerville;
+    src: url(kmKnZrc3Hgbbcjq75U4uslyuy4kn0qNZaxMaC82U.woff2);
+   
+}
+/* Media Start at 198px width */
+/* Background images stack on top of eachother over the divs */
+
+/* Dotted Underline */
+s {
+    text-decoration: dotted underline; 
+}
+/* Hyperlink Underline  */
+a {
+    color: #0d8ba1;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+/* Logo image */
+header img {
+    padding-top: 21px;
+    height: 49px;
+    width: 49px;
+    opacity: .6;
+}
+header {
+    background-image: url("http://www.csszengarden.com/214/contours-opaque.png"), url("http://www.csszengarden.com/214/gridlines-opaque.png");
+    background-attachment: fixed;
+    background-position: 6% -11%;
+    background-color: rgba(19, 67, 71);
+    border-top: solid 9.3px rgba(19, 67, 71);
+    height: 240px;
+}
+header > div.img {
+    background-image: url("http://www.csszengarden.com/214/huntington.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: .3% center;
+    background-repeat: no-repeat;
+    height: 240px;
+    opacity: 0.74; 
+}
+header div.header {
+    top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header h1 {
+    color: white;
+    font-family: Julius Sans One;
+    text-align: center;
+    font-size: 22px;
+    padding: 15px 14px 0px 14px;
+    font-weight: 400;
+}
+header h2 {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: Libre Baskerville-Italic;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 23px 0px 23px;
+    font-weight: 400;
+}
+header s {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: Libre Baskerville-Italic;
+}
+/* Nav */
+header nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 180px;
+}
+header ul { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+}
+header li:nth-child(1n) {
+    background-color: rgba(255, 255, 255, 0.164);
+    list-style: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: symbols;
+    font-size: 41px;
+    width: 70px;
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+    text-align: center;
+}
+header li:nth-child(2n) {
+    font-family: Julius Sans One;
+    font-size: 17px;
+    font-weight: 400;
+    flex: 1;
+    padding-top: 25.5px;
+    padding-bottom: 25.5px;
+    text-align: center;
+}
+header li:nth-child(3n) {
+    font-family: symbols;
+    font-size: 41px;
+    width: 70px;
+    text-align: center;
+}
+header li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: .3s;
+    color: white;
+}
+header span:nth-child(1n){
+    font-family: Julius Sans One;
+    display: none;
+}
+
+/* Body */
+/* Symbols Font */
+.appearLater {
+    display: none;
+}
+article > div {
+    padding-top: 30px;
+}
+article > div > div {
+    padding-bottom: 30px;
+}
+article p {
+    line-height: 25px;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+article h3 {
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-bottom: 9px;
+    font-family: Julius Sans One;
+    font-size: 20px;
+}
+article > .articleMid {
+    background-image: url("http://www.csszengarden.com/214/bamboo.png");
+    background-color: rgba(138,188,159,0.5);
+    background-attachment: fixed;
+    padding: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+article > div > .articleMid2 {
+    background-image: url("http://www.csszengarden.com/214/contours-opaque.png"), url("http://www.csszengarden.com/214/gridlines-opaque.png");
+    padding: 0px;
+}
+article > div > div > div {
+    padding-bottom: 25px;
+}
+/* Footer  */
+/* Footer Color  */
+footer {
+    background-image: url("http://www.csszengarden.com/214/contours-opaque.png"), url("http://www.csszengarden.com/214/gridlines-opaque.png");
+    background-color: rgba(19, 67, 71);
+    background-attachment: fixed;
+}
+footer .footerImg {
+    background-image: url("http://www.csszengarden.com/214/koi.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .7;
+}
+footer > div > h4 > span {
+    color: rgba(255, 255, 255, .9);
+}
+footer > div > h4 > span:hover {
+    text-decoration: underline;
+}
+footer > div > h4 {
+    color: rgba(255, 255, 255, 0.5);
+    /* background-color: black */
+}
+footer > div > h4 {
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    font-family: Libre Baskerville-Italic;
+}
+footer > .flex {
+    background-color: rgba(19, 67, 71);
+    padding: 15px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+footer > div > div {
+    text-align: center;
+}
+footer s {
+    text-decoration: none;
+    display: inline;
+    text-align: center;
+    font-family: symbols;
+    color: rgba(255, 255, 255, 0.6);
+    /* width: 31px; */
+    font-size: 31px;
+    /* height: 31px; */
+    margin: 7px;
+    border-radius: 50%;
+} 
+footer s:hover {
+    color: rgba(19, 67, 71); 
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: .5s;
+}
+/* Side Bar */
+aside > div > div > div.list {
+    height: 42px;
+    padding: 13px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.144);
+    background-color: #edf4f0;
+}
+aside > div > div > div.list:hover {
+    background-color: rgba(255, 255, 255, 0.11);
+    transition: .3s
+}
+aside > div > div > div > h6 {
+    font-family: Julius Sans One;
+    font-size: 16px;
+    color: #325050be;
+} 
+aside > div > div > div > p {
+    font-size: 13px;
+    padding-top: 5px;
+    color: #1a5952;
+}
+aside > div > div > div > p > span {
+    font-family: Libre Baskerville-Italic;
+    color: rgba(128, 128, 128, 0.534);
+}
+aside > div.bamboo {
+    background-color: rgba(138,188,159,0.5);
+    background-image: url("http://www.csszengarden.com/214/bamboo.png");
+}
+aside > div > div > div.box {
+    padding: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.226);
+}
+aside > div > div > div.box2 {
+    padding: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.226);
+}
+aside s {
+    font-family: Julius Sans One;
+}
+aside > div.sideSpace {
+    display: none;
+}
+/* Header: The word "All" appears after "View" */
+@media (min-width: 218px){
+    header span:nth-child(1n){
+        display: inline;
+    }
+    header span:nth-child(2n){
+        display: none;
+    }
+}
+/* Header: The word "Designs" appears after "View All" */
+@media (min-width: 296px){
+    header span:nth-child(2n){
+        display: inline;
+    }
+}
+/* Header: Title and subtitle font-size gets bigger */
+/* Designs List: Every other item shifts side-by-side */
+/* Footer: font-size gets bigger on line "By Dave Shea..."*/
+@media (min-width: 322px){
+    header h1 {
+        font-size: 29px;
+    }
+    header h2 {
+        font-size: 17px;
+    }
+    aside > div {
+        display: flex;
+    }
+    aside > div > div {
+        flex: 1;
+        flex-direction: column;
+    }
+    aside > div > div > div.list:nth-child(1n){
+        padding-bottom: 60px;
+    }
+    aside > div > div > div.list:nth-child(2n){
+        padding: 13px;
+    }
+    aside > div > div > div.list:nth-child(3n){
+        padding-bottom: 25px;
+    }
+    aside > div > div > div.box:nth-child(2n){
+        padding-bottom: 33px;
+    } 
+    aside > div > div > div.box2:nth-child(1n){
+        padding-bottom: 33px;
+    } 
+    aside > div > div > div.box2:nth-child(2n){
+        padding-bottom: 15px;
+    } 
+    footer > div > h4 {
+        font-size: 23px;
+        /* padding: 15px; */
+        padding-top: 25px;
+        padding-bottom: 25px;
+        line-height: 43px;
+    }
+    footer s {
+        font-size: 34px;
+        margin: 8px;
+        line-height: 43px;
+    }
+    footer > .flex {
+        padding: 50px;
+        padding-top: 35px;
+        padding-bottom: 31px;
+    }
+}
+/* Header: Logo shifts to the left of the title */
+/* Footer: Icons get bigger and take up space more space & space around "By Dave Shea..." margin get bigger */
+/* Designs List: Increase slightly in margin size */
+@media (min-width: 501px){
+    header div > div {
+        flex-direction: row;
+        padding-top: 17px;
+    }
+    header h2 {
+        padding-top: 0px;
+        padding-left: 50px;
+    }
+    header {
+        height: 220px;
+    }
+    header > div.img {
+        height: 220px;
+    }
+    header nav {
+        top: 160px;
+    }
+    article p {
+        padding-right: 55px;
+        padding-left: 50px;
+        line-height: 26px;
+    }
+    article h3 {
+        padding-right: 55px;
+        padding-left: 50px;
+    }
+    footer > div > h4 {
+        font-size: 23px;
+        /* padding: 15px; */
+        padding-top: 44px;
+        padding-bottom: 44px;
+        line-height: 45px;
+    }
+    footer s {
+        font-size: 50px;
+        margin-left: 25px;
+        margin-right: 20px;
+        line-height: 0px;
+    }
+    footer > .flex {
+        padding: 0px;
+        padding-top: 57px;
+        padding-bottom: 37px;
+    }
+    aside > div > div > div.list:nth-child(1n){
+        padding-bottom: 30px;
+    }
+    aside > div > div > div.list:nth-child(2n){
+        padding: 13px;
+    }
+    aside > div > div > div.box2:nth-child(1n){
+        padding-bottom: 15px;
+    } 
+    aside > div > div > div.box2:nth-child(2n){
+        padding-bottom: 33px;
+    } 
+}
+/* Header: Logo and title get bigger */
+/* Body: "Download the example..." line shows up  */
+@media (min-width: 601px){
+    header img {
+        height: 80px;
+        width: 80px;
+    }
+    header div > div {
+        padding: 0px;
+    }
+    header h1 {
+        font-size: 35px;
+        padding-top: 40px;
+        padding-left: 20px;
+    }
+    header h2 {
+        padding-left: 110px;
+    }
+    .appearLater {
+        display: inherit;
+    }
+    span.symbols {
+        font-family: symbols;
+        color: #809b7e;
+        font-size: 13px;
+        background-color: #d9e1cd;
+        border-radius: 2px;
+        padding: 2px;
+    }
+    article div > div > p > span {
+        color: #809b7e;
+        padding: 5px;
+        border-radius: 1px;
+    }
+    article div > div > p > span:hover {
+        background-color: #0d8ba1;
+        color: white;
+    }
+    
+}
+/* Designs List: Snaps to the right and font-size >>>gets bigger<<< & Designers and links stack back on top of eachother between the other div rows */
+/* Footer: Line font-size gets bigger */
+/* Body: font-size overall gets bigger */
+/* Header: Title, subtitle, and logo grow bigger & "View all desgins bar snaps to the right" and contains in it's space- >>>gets bigger<<< */
+@media (min-width: 1133px){
+    /* body */
+    body {
+        display: grid;
+        grid-template-rows: 310px 59% 991px 472px;
+        grid-template-columns: repeat(6, 1fr) 
+    }
+    /* Header */
+    header {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        height: 300px;
+    }
+    header > div.img {
+        height: 300px;
+    }
+    header > div > div.header {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        height: 300px;
+    }
+    header > div > div > div {
+        grid-column: 1/5;
+        grid-row: 2/5;
+        padding-left: 105px;
+        /* width: 60%; */
+    }
+    header > div > div > h2 {
+        grid-column: 1/5;
+        grid-row: 4/6;
+    }
+    header > div > div > nav {
+        align-items: center;
+        grid-column: 5/-1;
+        grid-row: 1/-1;
+        position: inherit;
+        background: rgba(0, 0, 0, 0.116);
+        height: 100%;
+    }
+    header img {
+        height: 130px;
+        width: 130px;
+        padding-top: 60px;
+    }
+    header h1 {
+        font-size: 53px;
+        padding-top: 30px;
+        padding-left: 29px;
+    }
+    header h2 {
+        font-size: 25px;
+        padding-top: 5px;
+        padding-left: 117px;
+    }
+    header ul {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+    header li {
+        border: .1px solid rgba(19, 67, 71, 0.637);
+    }
+    header li:nth-child(2n){
+        font-size: 21px;
+        padding-top: 23.5px;
+        padding-bottom: 23.5px;
+    }
+    /* article */
+    article {
+        display: grid;
+        grid-column: 1/-1;
+        grid-row: 2/4;
+        grid-template-rows: 37% 30% 33%;
+    }
+    article > div.start {
+        grid-row: 1/2;
+        padding-left: 58px;
+        padding-right: 35%;
+        padding-top: 53px;
+        padding-bottom: 330px;
+    }
+    article > div.articleMid {
+        grid-row: 2/3;
+        padding-left: 58px;
+        padding-top: 57px;
+    }
+    div.articleMid2 > h3 {
+        padding-right: 40%;
+    }
+    div.articleMid2 > p {
+        padding-right: 40%;
+    }
+    article > div.later {
+        grid-row: 3/4;
+        padding-left: 58px;
+        padding-top: 61px;
+        padding-right: 34.2%;
+    }
+    article h3 {
+        font-size: 28px;
+    }
+    article p {
+        font-size: 16px;
+        line-height: 32px;
+        padding-top: 2px;
+    }
+    article > div > div {
+        padding-bottom: 28px;
+    }
+    /* footer */
+    footer {
+        grid-column: 1/-1;
+        grid-row: 4/-1
+    }
+    footer > div.footerImg {
+        height: 320px;
+    }
+    footer > div.flex {
+        height: 57px;
+    }
+    footer s {
+       line-height: 32px;
+       margin-right: 43px;
+       margin-left: 43px;
+       font-size: 46px;
+    }
+    footer > div > h4 {
+        padding: 101px;
+        padding-right: 115px;
+        padding-left: 115px;
+        line-height: 61px;
+        font-size: 31px;
+    }
+    /* Side Bar */
+    aside {
+        display: grid;
+        grid-column: 5/-1;
+        grid-row: 2/4;
+        grid-template-rows: 37% 30% 33%;
+    }
+    aside > div.start {
+        grid-row: 1/2;
+        flex-direction: column;
+        padding: 37px;
+        background-color: #edf4f0;
+    }
+    aside > div > div {
+        flex: none;
+    }
+    aside > div > div > div.list:nth-child(1n){
+        padding: 30px;
+    }
+    aside > div.bamboo {
+        grid-row: 2/3;
+        padding: 37px;
+        background-color: rgba(138, 188, 159, 0.185);
+        background-image: none;
+        flex-direction: column;
+    }
+    aside > div.sideSpace {
+        display: inline;
+        background-color: #edf4f0;
+        grid-row: 3/-1;
+    }
+    aside > div > div > div > h6 {
+        font-size: 20px;
+    }
+    aside > div > div > div > p {
+        font-size: 14px;
+    }
+    aside > div > div > div.box:nth-child(1n){
+        padding: 30px;
+    }
+    aside > div > div > div.box2:nth-child(1n){
+        padding: 30px;
+    }
+}

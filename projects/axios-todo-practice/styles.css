@@ -2,15 +2,15 @@
     margin: 0;
 }
 .list{
-    display: grid;
+    /* display: grid; */
     border: 1px solid black;
     /* justify-content: space-between; */
     margin: 5px;
+    padding: 5px;
 }
 .todoImg {
     width: 75px;
     height: 75px;
-    margin: 5px;
 }
 .title {
     font-size: 20px;
@@ -28,4 +28,12 @@ form > div {
 }
 h1 {
     font-size: 25px;
+}
+.delete {
+    display: flex;
+    margin-top: 5px;
+}
+.delete:hover {
+    text-decoration: underline;
+    color: blue;
 }
