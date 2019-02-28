@@ -44,7 +44,7 @@ var voters = [
 //
 function shoppingSpree(arr) {
     return arr.reduce(function(total, sum){
-        return total + (sum.price)
+        return total + sum.price
     }, 0) 
  }
  

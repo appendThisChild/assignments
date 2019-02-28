@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.friendsList-div {
+    background-color: burlywood;
+    padding: 0.1px;
+}
+.friend-div {
+    background-color: rgba(0, 102, 255, 0.719);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+}

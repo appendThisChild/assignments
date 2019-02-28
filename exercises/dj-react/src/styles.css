@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(2, 150px);
+    grid-gap: 5px;
+    margin: 20px;
+    justify-content: center;
+}
+p {
+    border: 1px solid black;
+}
+h1 {
+    color: rgba(0, 0, 128, 0.61);
+}

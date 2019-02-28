@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.spots-div > div {
+    margin: 15px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.spots-div > div > p {
+    padding-bottom: 20px;
+}
+.blue {
+    background-color: blue
+}
+.green {
+    background-color: green
+}
+.yellow {
+    background-color: yellow
+}
+.snow {
+    background-color: aqua
+}

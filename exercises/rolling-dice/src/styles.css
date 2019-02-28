@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fiveDice {
+    display: grid;
+    grid-template-rows: 150px 30px;
+    grid-template-columns: repeat(5, 150px);
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    padding: 20px;
+    grid-gap: 20px;
+
+}
+.fiveDiceFinal {
+    display: grid;
+    grid-template-rows: 150px 30px;
+    grid-template-columns: repeat(5, 150px);
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.808);
+    padding: 20px;
+    grid-gap: 20px;
+
+}
+.fiveDice2 {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(7, 50px);
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    padding: 20px;
+    grid-gap: 20px;
+
+}
+.die {
+    display: grid;
+    grid-template-columns: repeat(3, 41px);
+    grid-template-rows: repeat(3, 42px);
+    justify-content: center;
+    align-items: center;
+    grid-gap: auto;
+    background-color: white;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    /* transition-delay: 1s; */
+    /* transition-duration: .2s; */
+}
+.dieHold {
+    display: grid;
+    grid-template-columns: repeat(3, 41px);
+    grid-template-rows: repeat(3, 42px);
+    justify-content: center;
+    align-items: center;
+    grid-gap: auto;
+    background-color: white;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    /* transition-delay: 1s; */
+    /* transition-duration: .2s; */
+    box-shadow: 0px 0px 15px 5px yellow;
+}
+.die2 {
+    display: grid;
+    grid-template-columns: repeat(3, 13px);
+    grid-template-rows: repeat(3, 12.54px);
+    justify-content: center;
+    align-items: center;
+    grid-gap: auto;
+    background-color: white;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    /* transition-delay: 1s; */
+    /* transition-duration: .2s; */
+}
+/* 
+.die:active {
+    box-shadow: 0px 0px 15px 5px aqua;
+} */
+.blackCircle {
+    background-color: black;
+    border-radius: 100%;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+.whiteCircle {
+    background-color: white;
+    border-radius: 100%;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+button {
+    grid-column: 3/4;
+    grid-row: 2/-1 ;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.total {
+    grid-column: 1/2;
+    grid-row: 2/-1 ;
+}
+.total2 {
+    font-size: 20px;
+}
+.rolls {
+    grid-column: 5/-1;
+    grid-row: 2/-1 ;
+}
