@@ -1,0 +1,280 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.header {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(7, 24px);
+    background: url("https://tokyotreat.cdn.prismic.io/tokyotreat/243d7a4742342b7a1ce8db2cd21d757ebd215a68_studio_ghibli_characters_by_ficklestix-d846q1x.jpg");
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(165, 42, 42);
+    box-shadow: inset 0px 0px 18px 13px rgba(0,0,0,0.62);
+}
+header {
+    grid-row: 2/5;
+    grid-column: 7/-1;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -5px 6px 20px 3px #000000;
+
+}
+.logo {
+    height: 60px;
+}
+nav {
+    background-image: linear-gradient(to top left, brown, black);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+}
+nav > a {
+    text-decoration: none;
+    color: rgb(0, 238, 255);
+    font-size: 17px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+nav > a:hover {
+    text-decoration: underline;
+    color: rgb(0, 135, 145);
+
+}
+nav > a::after {
+    color: rgb(0, 135, 145);
+}
+footer {
+    background-image: radial-gradient(rgb(0, 110, 255) 55%, black);
+    color: rgb(122, 246, 255);
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.bottomLogo {
+    height: auto;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.movie {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2px;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 0, 0.8);
+    color: black;
+    box-shadow: 0px 3px 10px 1px #000000;
+    padding: 5px;
+}
+div.movie > h1 {
+    font-size: 26px;
+    text-align: center;
+}
+div.movie > h1:hover {
+    color: rgb(0, 238, 255);
+    cursor: context-menu;
+    text-shadow: 0px 0px 6px black;
+}
+
+div.baseClass > div {
+    transition: padding-top .8s, border-top .8s;
+}
+div.displayNone > div {
+    padding-top: 0px;
+    border-top: 0px;
+}
+div.display > div {
+    padding-top: 20px;
+    margin-top: 5px;
+    border-top: .25px solid black;
+}
+
+div.baseClass > img {
+    float: left;
+    height: auto;
+    transition: width .8s, height .8s;
+    padding-right: 5px;
+    padding-top:10px;
+}
+div.displayNone > img {
+    width: 0px;
+}
+div.display > img {
+    width: 145px;
+    cursor: zoom-in;
+}
+div.display > img.zoom {
+    cursor: zoom-out;
+    height: auto;
+    width: 100%;
+    padding: 0px;
+}
+
+
+div.baseClass > div > h4 {
+    transition: font .8s;
+    font-weight: 400;
+}
+div.displayNone > div > h4 {
+    font-size: 0px;
+}
+div.display > div > h4 {
+    font-size: 15px;
+    line-height: 18px;
+}
+
+div.display > div > div {
+    padding-top: 10px;
+}
+div.baseClass > div > div > p {
+    transition: font .8s;
+}
+div.displayNone > div > div > p {
+    font-size: 0px;
+}
+div.display > div > div > p {
+    font-size: 15px;
+    line-height: 18px;
+
+}
+.filmsContainer {
+    background-image: url("https://i.pinimg.com/originals/5a/71/7d/5a717d15b5a82633c85fea89dfec6cba.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 15px;
+    /* padding-bottom: .5px; */
+}
+.sortBy {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.sortBy li {
+    flex: 1;
+    display: inline;
+    text-align: center;
+    font-size: 15px;
+    cursor: default;
+}
+.sortBy > div > li {
+    flex: 1;
+    display: inline;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+.sortBy > div {
+    flex: 1;
+    display: inline;
+    text-align: center;
+    font-size: 15px;
+
+}
+.sortBy > div > li:hover{
+    text-decoration: underline;
+}
+.sortBy > div > span {
+    cursor: pointer;
+}
+@media (min-width: 425px){
+    .header {
+        grid-template-rows: repeat(7, 32px);
+    }
+    .logo {
+        height: 80px;
+    }
+    div.movie {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media (min-width: 580px){
+    .header {
+        grid-template-rows: repeat(7, 45px);
+    }
+    .logo {
+        height: 110px;
+    }
+    div.movieContainer {
+        display: flex;
+        /* width: 580px; */
+        /* overflow: scroll; */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    div.movie {
+        width: 44%;
+    }
+    nav > a {
+        font-size: 20px;
+    }
+}
+@media (min-width: 768px){
+    .header {
+        grid-template-rows: repeat(9, 45px);
+    }
+    div.movie {
+        width: 33%;
+    }
+    div.movieContainer {
+        flex-direction: column;
+    }
+    div.display {
+        position: fixed;
+        left: 37%;
+
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 0, 0.8);
+        color: black;
+        box-shadow: 0px 3px 10px 1px #000000;
+        padding: 5px;
+
+        bottom: 15px;
+        top: 15px;
+        right: 15px;
+    }
+    div.display > div {
+        padding-top: 20px;
+        margin-top: 5px;
+        border-top: none;
+    }
+    div.display > img {
+        width: 55%;
+        height: 55%;
+    }
+    div.baseClass > img {
+        float: none;
+    }
+    div.baseClass {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sortBy {
+        justify-content: flex-start;
+    }
+    .sortBy li {
+        flex: none;
+        width: 95px;
+    }
+    .sortBy > div {
+        flex: none;
+        width: 95px;
+    }
+}
