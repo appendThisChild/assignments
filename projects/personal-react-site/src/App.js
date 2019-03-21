@@ -5,7 +5,7 @@ import Submissions from "./components/Submissions"
 import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header.js"
 import Footer from "./components/Footer.js"
-import { withApi } from "./components/shared/ApiProvider.js"
+import { withApi } from "./context/ApiProvider.js"
 
 const App = props => {
         return(

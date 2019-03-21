@@ -12,6 +12,11 @@ mongoose.connect('mongodb://localhost:27017/first-db', {useNewUrlParser: true}, 
 
 app.use('/bounty', require('./routes/bountyRoute.js'))
 
+app.use((err, req, res, next) => {
+    console.error(err)
+    return res.send({errMsg: err.message})
+})
+
 app.listen(6250, () => {
     console.log('[+] Server is running on Port 6250')
 })

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom"
 import App from "./App.js"
 import "./styles.css"
 import { BrowserRouter } from "react-router-dom"
-import ApiProvider from "./components/shared/ApiProvider.js";
+import ApiProvider from "./context/ApiProvider.js";
 
 
 ReactDOM.render(
