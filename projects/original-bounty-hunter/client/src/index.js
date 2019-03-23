@@ -1,11 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import App from "./App.js"
-import ApiProvider from "./context/ApiProvider.js"
+import BountyProvider from "./context/BountyProvider.js"
+import "./styles.css"
 
 ReactDOM.render(
-<ApiProvider>
+<BountyProvider>
     <App />
-</ApiProvider>
+</BountyProvider>
 ,
  document.getElementById('root'))
