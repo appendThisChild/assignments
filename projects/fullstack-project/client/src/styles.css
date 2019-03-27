@@ -2,3 +2,33 @@
     margin: 0; 
     padding: 0;
 }
+
+/* Nav Bar */
+.navDropdownMenu {
+    display: flex;
+    flex-direction: column;
+}
+.navDropdown {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.navDropdownLink {
+    position: absolute;
+}
+.navDropdownLink2 {
+    position: absolute;
+    margin-top: 18px;
+}
+nav {
+    display: flex;
+}
+
+/* Footer */
+.shareButtons {
+    display: flex;
+}
+.shareButton {
+    outline: none;
+}
+

@@ -5,7 +5,7 @@ const Header = (props) => {
     return(
         <div>
             Header
-            <Nav loggedIn={props.loggedIn} userName={props.userName}/>
+            <Nav loggedIn={props.loggedIn} userName={props.userName} handleLogOut={props.handleLogOut}/>
         </div>
     )
 }

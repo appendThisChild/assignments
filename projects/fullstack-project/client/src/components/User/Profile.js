@@ -8,16 +8,10 @@ class Profile extends Component {
         }
     }
 
-    handleSubmit = () => {
-        this.props.handleLogOut()
-        this.props.history.push('/')
-    }
-
     render(){
         return(
             <div>
                 Profile
-                <button onClick={this.handleSubmit}>Log Out</button>
             </div>
         ) 
     }

@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom"
 
 // On Every Page
 import Header from "./components/Header/Header.js"
+import Footer from "./components/Footer/Footer.js"
 
 //Routes
 import Home from "./components/Home/Home.js"
@@ -12,6 +13,7 @@ import BookAppointment from "./components/Appointment/BookAppointment.js"
 import Profile from "./components/User/Profile.js"
 import SignIn from "./components/User/SignIn.js"
     import SignUp from "./components/User/SignUp.js"
+import Help from "./components/Help/Help.js"
 
 
 class App extends Component {
@@ -49,7 +51,7 @@ class App extends Component {
         const { loggedIn, inSale, userName } = this.state
         return(
             <div>
-                <Header loggedIn={loggedIn} userName={userName}/>
+                <Header loggedIn={loggedIn} userName={userName} handleLogOut={this.handleLogOut}/>
                 <Switch>
                     <Route exact path="/" render={renderProps => <Home {...renderProps}/>}/>
                     <Route path="/bookAppointment" render={renderProps => <BookAppointment handleInSale={this.handleInSale} {...renderProps}/>}/>
@@ -61,13 +63,13 @@ class App extends Component {
                             <Route path="/receipt" render={renderProps => <Rececipt {...renderProps}/>}/>
                     <Route path="/user" render={renderProps => (
                         loggedIn 
-                        ? <Profile handleLogOut={this.handleLogOut} {...renderProps}/> 
+                        ? <Profile {...renderProps}/> 
                         : <SignIn inSale={inSale} handleLogIn={this.handleLogIn} {...renderProps}/>
                     )}/>
                         <Route path="/signUp" render={renderProps => <SignUp inSale={inSale} handleLogIn={this.handleLogIn} {...renderProps}/>}/>
-                    {/* Contact Us Link */}
+                    <Route path="/help" render={renderProps => <Help {...renderProps}/>}/>
                 </Switch>
-                {/* Footer */}
+                <Footer />
             </div>
         )
     }

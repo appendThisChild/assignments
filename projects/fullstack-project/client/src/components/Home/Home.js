@@ -1,11 +1,23 @@
-import React from "react"
+import React, { Component } from "react"
 
-const Home = () => {
-    return(
-        <div>
-            Home Link
-        </div>
-    )
+class Home extends Component {
+    constructor(){
+        super()
+        this.state = {
+
+        }
+    }
+
+    render(){
+       return(
+            <div>
+                Home Link
+                {/* News */}
+                {/* About the company/person */}
+                {/* General info "like: prices/packages/etc..." */}
+            </div>
+        ) 
+    }
 }
 
 export default Home;
