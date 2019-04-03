@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-// import { Link } from "react-router-dom"
+import { withUser } from "../../context/UserProvider.js"
 
 class PaymentPackage extends Component {
     constructor(){
@@ -9,7 +9,7 @@ class PaymentPackage extends Component {
         }
     }
     handleSubmit = () => {
-        this.props.handleSaleDone()
+        this.props.saleDone()
         this.props.history.push('/receipt')
     }
     render(){
@@ -22,4 +22,4 @@ class PaymentPackage extends Component {
     }
 }
 
-export default PaymentPackage;
+export default withUser(PaymentPackage);

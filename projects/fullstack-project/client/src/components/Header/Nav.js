@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
+import { withUser } from "../../context/UserProvider.js"
 
 class Navigation extends Component {
     constructor(){
@@ -14,16 +15,17 @@ class Navigation extends Component {
         }))
     }
     handleSignOut = () => {
-        this.props.handleLogOut()
+        this.props.logout()
         this.toggle()
     }
 
     render(){
+        const {user, token} = this.props
         let userLink = <Link to="/user" >Sign In</Link>
-        if (this.props.loggedIn){
+        if (token){
             userLink = 
             <div className={"navDropdownMenu"} onMouseEnter={this.toggle} onMouseLeave={this.toggle}>
-                    <span className={"navDropdown"}>{this.props.userName}</span>
+                    <span className={"navDropdown"}>{user.username}</span>
                     {this.state.dropdownOpen ? 
                         <>
                             <div>
@@ -46,4 +48,4 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;
+export default withUser(Navigation);

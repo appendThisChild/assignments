@@ -32,3 +32,8 @@ nav {
     outline: none;
 }
 
+/* Sign In */
+.signInUp:hover {
+    text-decoration: underline;
+    color: blue;
+}

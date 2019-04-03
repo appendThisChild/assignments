@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Switch, Route } from "react-router-dom"
+import { withUser } from "./context/UserProvider.js"
 
 // On Every Page
 import Header from "./components/Header/Header.js"
@@ -12,7 +13,6 @@ import BookAppointment from "./components/Appointment/BookAppointment.js"
         import Rececipt from "./components/Appointment/Receipt.js"
 import Profile from "./components/User/Profile.js"
 import SignIn from "./components/User/SignIn.js"
-    import SignUp from "./components/User/SignUp.js"
 import Help from "./components/Help/Help.js"
 
 
@@ -20,53 +20,29 @@ class App extends Component {
     constructor(){
         super()
         this.state = {
-            userName: "Ryan Pettingill",
-            loggedIn: false,
-            inSale: false
+            
         }
     }
-    handleInSale = () => {
-        this.setState(() => ({
-            inSale: true
-        }))
-    }
-    handleSaleDone = () => {
-        this.setState(() => ({
-            inSale: false
-        }))
-    }
-    handleLogIn = () => {
-        this.setState(() => ({
-            loggedIn: true
-        }))
-    }
-    handleLogOut = () => {
-        this.setState(() => ({
-            loggedIn: false
-        }))
-    }
-
 
     render(){
-        const { loggedIn, inSale, userName } = this.state
+        const { token } = this.props
         return(
             <div>
-                <Header loggedIn={loggedIn} userName={userName} handleLogOut={this.handleLogOut}/>
+                <Header />
                 <Switch>
                     <Route exact path="/" render={renderProps => <Home {...renderProps}/>}/>
-                    <Route path="/bookAppointment" render={renderProps => <BookAppointment handleInSale={this.handleInSale} {...renderProps}/>}/>
+                    <Route path="/bookAppointment" render={renderProps => <BookAppointment {...renderProps}/>}/>
                         <Route path="/paymentPackage" render={renderProps => (
-                            loggedIn
-                            ? <PaymentPackage handleSaleDone={this.handleSaleDone} {...renderProps}/>
-                            : <SignIn inSale={inSale} handleLogIn={this.handleLogIn} {...renderProps}/>
+                            token
+                            ? <PaymentPackage {...renderProps}/>
+                            : <SignIn {...renderProps}/>
                         )}/>
                             <Route path="/receipt" render={renderProps => <Rececipt {...renderProps}/>}/>
                     <Route path="/user" render={renderProps => (
-                        loggedIn 
+                        token 
                         ? <Profile {...renderProps}/> 
-                        : <SignIn inSale={inSale} handleLogIn={this.handleLogIn} {...renderProps}/>
+                        : <SignIn {...renderProps}/>
                     )}/>
-                        <Route path="/signUp" render={renderProps => <SignUp inSale={inSale} handleLogIn={this.handleLogIn} {...renderProps}/>}/>
                     <Route path="/help" render={renderProps => <Help {...renderProps}/>}/>
                 </Switch>
                 <Footer />
@@ -75,4 +51,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default withUser(App);

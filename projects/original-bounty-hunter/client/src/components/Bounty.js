@@ -53,7 +53,8 @@ class Bounty extends Component {
                         handleChange={this.handleChange}
                         handleSubmit={this.handleSubmit}
                         btnText="Submit Edit"
-                        {...this.state}/>
+                        {...this.state}
+                    />
                     <button onClick={this.toggler}>Cancel</button>
                     </>
                 }

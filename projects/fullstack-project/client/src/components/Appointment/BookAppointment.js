@@ -1,6 +1,5 @@
 import React, { Component } from "react"
-// import { Link } from "react-router-dom"
-
+import { withUser } from "../../context/UserProvider.js"
 
 class BookAppointment extends Component {
     constructor(props){
@@ -10,7 +9,7 @@ class BookAppointment extends Component {
         }
     }
     handleSubmit = () => {
-        this.props.handleInSale()
+        this.props.inSale()
         this.props.history.push('/paymentPackage')
     }
     render(){
@@ -23,4 +22,4 @@ class BookAppointment extends Component {
     }
 }
 
-export default BookAppointment;
+export default withUser(BookAppointment);
