@@ -3,13 +3,8 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .backImage {
-    background-image: url("https://i.pinimg.com/originals/be/07/56/be07567c75c032b3c9cf210011deec0e.jpg");
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
+    background-image: url("https://mario5.florian-rappl.de/Content/backgrounds/05.png");
     background-size: cover;
-    z-index: -1;
-    opacity: .40;
 }
 img {
     opacity: 1;
@@ -39,6 +34,9 @@ h1 {
     margin-top: 10px;
     margin-bottom: 80px;
     font-size: 4.5vh;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 h3 {
     display: inline-block;
@@ -49,9 +47,12 @@ div {
 }
 .row {
     display: flex;
+    flex-wrap: wrap;
 }
 .column {
     flex: 25%;
+
+    padding: 25px;
 }
 .button {
     width: 6.5vh;
@@ -76,9 +77,8 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 footer {
+    margin-top: 50pt;
     text-align: center;
-    position: fixed; 
-    bottom: 0px;
     background-color: rgba(0, 238, 255, 0.274);
     width: 100%;
 }
